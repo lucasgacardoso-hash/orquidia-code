@@ -1,3 +1,4 @@
+ conteudo
 /* --Lucas-- */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&display=swap");
@@ -169,4 +170,12 @@
   .conteudo h2 {
     font-size: 1.625rem;
   }
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    margin-right: 15px;
 }
