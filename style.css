@@ -160,3 +160,13 @@
   outline-offset: 2px;
 }
 
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .conteudo .secao {
+    padding: 56px 0;
+  }
+
+  .conteudo h2 {
+    font-size: 1.625rem;
+  }
+}
