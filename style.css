@@ -32,3 +32,28 @@
   margin: 0;
 }
 
+/* ---------- Estrutura das seções ---------- */
+.conteudo .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.conteudo .secao {
+  padding: 80px 0;
+}
+
+.conteudo .secao-alt {
+  background: #ffffff;
+}
+
+.conteudo h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.conteudo .secao-intro {
+  margin: 0 0 40px;
+  max-width: 60ch;
+}
+
