@@ -116,3 +116,24 @@
   opacity: 0.8;
 }
 
+/* ---------- Programação ---------- */
+.conteudo .dia {
+  font-size: 1.25rem;
+  margin: 40px 0 16px;
+}
+
+.conteudo .dia:first-of-type {
+  margin-top: 0;
+}
+
+.conteudo .card-horario {
+  border-top-color: var(--c-destaque);
+}
+
+.conteudo .horario {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--c-principal);
+}
+
