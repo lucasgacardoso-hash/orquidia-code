@@ -57,3 +57,13 @@
   max-width: 60ch;
 }
 
+/* ---------- Sobre ---------- */
+.conteudo .sobre {
+  max-width: 760px;
+}
+
+.conteudo .sobre p {
+  margin: 0 0 16px;
+  font-size: 1.125rem;
+}
+
