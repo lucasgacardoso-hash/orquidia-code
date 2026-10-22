@@ -1,3 +1,7 @@
+/* ============================================= */
+/* ============ CSS BASE (desktop) ============= */
+/* ============================================= */
+
 /* --Lucas-- */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&display=swap");
@@ -160,63 +164,6 @@
   outline-offset: 2px;
 }
 
-/* ============================================= */
-/* ================== MOBILE =================== */
-/* ============================================= */
-
-/* ---------- Conteúdo: mobile (Lucas) ---------- */
-@media (max-width: 600px) {
-  .conteudo .secao {
-    padding: 56px 0;
-  }
-
-  .conteudo h2 {
-    font-size: 1.625rem;
-  }
-
-  /* Evita rolagem horizontal em telas de ~320px */
-  .conteudo .grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
-  }
-}
-
-/* ---------- Header e banner: mobile (Kimberlie) ---------- */
-@media (max-width: 768px) {
-  .cabecalho {
-    flex-direction: column;
-    gap: 12px;
-    padding: 16px 20px;
-  }
-
-  .cabecalho nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px 18px;
-  }
-
-  .logo h1 {
-    font-size: 1.5rem;
-  }
-
-  .banner {
-    padding: 40px 20px;
-  }
-
-  .banner h2 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .banner h2 {
-    font-size: 1.4rem;
-  }
-
-  .banner p {
-    font-size: 0.95rem;
-  }
-}
-
 /* --Kimberlie-- */
 /* ---------- Header ---------- */
 
@@ -275,8 +222,203 @@
   font-family: "Inter", Arial, sans-serif;
 }
 
+/* --Amabile-- */
+/* ---------- Rodapé (base) ---------- */
+/* ATENÇÃO: este bloco é uma base criada para o rodapé não ficar sem estilo.
+   Se a Amabile já tem o CSS dela na branch feature/footer, use o dela no lugar. */
+
+footer {
+  background-color: #1E3A8A;
+  color: white;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.rodape__colunas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 56px 24px 32px;
+}
+
+.rodape__marca {
+  margin: 0 0 12px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.rodape__titulo {
+  margin: 0 0 16px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1.1rem;
+  color: #F59E0B;
+}
+
+.rodape__frase,
+.rodape__dados {
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+
+.rodape__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rodape__lista li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.rodape__lista i {
+  margin-top: 4px;
+  color: #F59E0B;
+}
+
+.rodape__coluna a {
+  color: white;
+  text-decoration: none;
+}
+
+.rodape__coluna a:hover {
+  color: #F59E0B;
+}
+
+/* Redes sociais */
+.rodape__redes {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+}
+
+/* Newsletter (só visual) */
+.rodape__newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rodape__label {
+  font-size: 0.9rem;
+}
+
+.rodape__input {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.rodape__botao {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #F59E0B;
+  color: #1F2937;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.rodape__botao:hover {
+  background: #d98a06;
+}
+
+/* Linha final */
+.rodape__base {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+}
+
+.rodape__base p {
+  margin: 0;
+}
+
+.rodape__topo {
+  color: white;
+  text-decoration: none;
+}
+
+.rodape__topo:hover {
+  color: #F59E0B;
+}
+
+/* ============================================= */
+/* ============ MOBILE (sempre no final) ======= */
+/* ============================================= */
+
+/* ---------- Conteúdo: mobile (Lucas) ---------- */
+@media (max-width: 600px) {
+  .conteudo .secao {
+    padding: 56px 0;
+  }
+
+  .conteudo h2 {
+    font-size: 1.625rem;
+  }
+
+  /* Evita rolagem horizontal em telas de ~320px */
+  .conteudo .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  }
+}
+
+/* ---------- Header e banner: mobile (Kimberlie) ---------- */
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+
+  .cabecalho nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner {
+    padding: 40px 20px;
+  }
+
+  .banner h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner h2 {
+    font-size: 1.4rem;
+  }
+
+  .banner p {
+    font-size: 0.95rem;
+  }
+}
+
 /* ---------- Rodapé: mobile (Amabile) ---------- */
 @media (max-width: 768px) {
+  /* As colunas viram uma só, empilhadas */
   .rodape__colunas {
     display: grid;
     grid-template-columns: 1fr;
@@ -284,17 +426,20 @@
     padding: 32px 20px;
   }
 
+  /* E-mail e endereço longos não estouram a tela */
   .rodape__lista li,
   .rodape__lista a {
     overflow-wrap: anywhere;
   }
 
+  /* Campo de e-mail e botão ocupam a largura toda */
   .rodape__input,
   .rodape__botao {
     width: 100%;
     box-sizing: border-box;
   }
 
+  /* Direitos autorais e "Voltar ao topo" empilhados */
   .rodape__base {
     flex-direction: column;
     gap: 12px;
