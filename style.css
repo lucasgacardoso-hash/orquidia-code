@@ -160,7 +160,11 @@
   outline-offset: 2px;
 }
 
-/* ---------- Mobile ---------- */
+/* ============================================= */
+/* ================== MOBILE =================== */
+/* ============================================= */
+
+/* ---------- Conteúdo: mobile (Lucas) ---------- */
 @media (max-width: 600px) {
   .conteudo .secao {
     padding: 56px 0;
@@ -169,15 +173,50 @@
   .conteudo h2 {
     font-size: 1.625rem;
   }
+
+  /* Evita rolagem horizontal em telas de ~320px */
+  .conteudo .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  }
 }
 
-nav {
-    margin-top: 15px;
+/* ---------- Header e banner: mobile (Kimberlie) ---------- */
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+
+  .cabecalho nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner {
+    padding: 40px 20px;
+  }
+
+  .banner h2 {
+    font-size: 1.6rem;
+  }
 }
 
-nav a {
-    margin-right: 15px;
+@media (max-width: 480px) {
+  .banner h2 {
+    font-size: 1.4rem;
+  }
+
+  .banner p {
+    font-size: 0.95rem;
+  }
 }
+
 /* --Kimberlie-- */
 /* ---------- Header ---------- */
 
@@ -234,4 +273,32 @@ nav a {
 .banner p {
   margin: 8px 0;
   font-family: "Inter", Arial, sans-serif;
+}
+
+/* ---------- Rodapé: mobile (Amabile) ---------- */
+@media (max-width: 768px) {
+  .rodape__colunas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 32px 20px;
+  }
+
+  .rodape__lista li,
+  .rodape__lista a {
+    overflow-wrap: anywhere;
+  }
+
+  .rodape__input,
+  .rodape__botao {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .rodape__base {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding: 20px;
+  }
 }
